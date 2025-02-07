@@ -51,3 +51,13 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 // logged the results
 console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`);   // Find the Total Cost for Basic Plan
 console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);  // Find the Total Cost for Premium Plan
+
+// Task 5: Returning Values - Currency Conversion
+function convertCurrency(amount, exchangeRate) {
+    let converted = amount * exchangeRate;
+    return converted;
+}
+
+// logged the results to 2 decimal places
+console.log(`Converted Amount: $${convertCurrency(100, 1.1).toFixed(2)}`); // Find the Converted Amount
+console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`); // Find the Converted Amount
