@@ -61,3 +61,16 @@ function convertCurrency(amount, exchangeRate) {
 // logged the results to 2 decimal places
 console.log(`Converted Amount: $${convertCurrency(100, 1.1).toFixed(2)}`); // Find the Converted Amount
 console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`); // Find the Converted Amount
+
+// Task 6: Higher-Order Functions - Discount Strategy for Bulk Orders
+let orders = [200, 600, 1200, 450, 800];
+
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(discountFunction);
+}
+
+// If an order is above $500, apply a 10% discount
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+console.log("Discounted Orders:", discountedOrders);
+
