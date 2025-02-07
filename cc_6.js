@@ -74,3 +74,15 @@ let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount
 
 console.log("Discounted Orders:", discountedOrders);
 
+// Task 7: Closures - Business Expense Tracker
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) { //Track expenses and return the total expenses
+        totalExpenses += expense;
+        return `Total Expenses: $${totalExpenses}`;
+    };
+}
+
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Find the Total Expenses
+console.log(tracker(150)); // Find the Total Expenses
