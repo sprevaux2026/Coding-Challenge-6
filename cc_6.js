@@ -33,3 +33,21 @@ const calculateBonus = (salary, performanceRating) => {
 // logged the results
 console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`); // Find the bonus for excellent performance
 console.log(`Bonus: $${calculateBonus(7000, "Good")}`);      // Find the bonus for good performance
+
+// Task 4: Parameters and Arguments - Subscription Pricing Model
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let monthlyCost = 0;
+    if (plan === "Basic") { // Basic plan costs $10 per month
+        monthlyCost = 10;
+    } else if (plan === "Premium") { // Premium plan costs $20 per month
+        monthlyCost = 20;
+    } else if (plan === "Enterprise") { // Enterprise plan costs $50 per month
+        monthlyCost = 50;
+    }
+    let totalCost = (monthlyCost * months) - discount;
+    return totalCost;
+}
+
+// logged the results
+console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`);   // Find the Total Cost for Basic Plan
+console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);  // Find the Total Cost for Premium Plan
